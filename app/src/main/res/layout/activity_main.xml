@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ededed"
+    tools:context="com.example.rick.rickvergunst_pset4.MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To-Do App"
+        android:textSize="40dp"
+        />
+
+    <TextView
+        android:id="@+id/titleDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold an item to delete it"
+        android:layout_below="@+id/titleText"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/addButton"
+        android:hint="To do"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Add"
+        android:onClick="addToDo"
+        />
+
+    <ListView
+        android:id="@+id/toDoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleDesc"
+        android:layout_above="@+id/addButton"
+        android:background="#ffffff"
+    />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/toDoList"
+        android:onClick="clearList"
+        android:text="Clear"
+        />
+</RelativeLayout>
